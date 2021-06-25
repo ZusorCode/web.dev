@@ -24,9 +24,9 @@
       <a href="{{absolutePostUrl}}" target="_blank">Read more...</a>
     </content>
     {% for entry in post.data.authors %}
-    {%- set author =  collections.authors[entry] -%}
+    {%- set author = collections.authors[entry] -%}
     <author>
-      <name>{{ author.title }}</name>
+      <name>{{ author.title | i18n(locale) }}</name>
     </author>
     {%- endfor %}
   </entry>
